@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://title screen.gd" type="Script" id=1]
+[ext_resource path="res://TitleScreen.png" type="Texture" id=2]
+[ext_resource path="res://Quit.png" type="Texture" id=3]
+[ext_resource path="res://pressedQuit1.png" type="Texture" id=4]
+[ext_resource path="res://focusQuit.png" type="Texture" id=5]
+[ext_resource path="res://Start.png" type="Texture" id=6]
+[ext_resource path="res://pressedStart.png" type="Texture" id=7]
+[ext_resource path="res://focusStart.png" type="Texture" id=8]
+[ext_resource path="res://Jump1.png" type="Texture" id=9]
+
+[node name="Title Screen" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 641.122, 352.252 )
+scale = Vector2( 0.674962, 0.680341 )
+texture = ExtResource( 2 )
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 779.699
+margin_top = 435.23
+margin_right = 2059.7
+margin_bottom = 1155.23
+rect_scale = Vector2( 0.39, 0.51 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 85.532
+margin_top = 441.363
+margin_right = 1365.53
+margin_bottom = 1161.36
+rect_scale = Vector2( 0.39, 0.47 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 8 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 54.7968
+margin_top = -171.788
+margin_right = 1334.8
+margin_bottom = 548.212
+texture = ExtResource( 9 )
+[connection signal="pressed" from="TextureButton2" to="." method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
